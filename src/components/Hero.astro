@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import devImage from "/src/assets/DevImage.png";
+import devImageHover from "/src/assets/DevImageHover.png";
+---
+
+<!-- HERO CONTAINER -->
+<div class="h-[100vh] flex items-center justify-center">
+    <!-- CENTERED HERO CONTENT -->
+    <div class="grid grid-cols-5 text-white">
+        <!-- LEFT CONTENT -->
+        <div class="col-span-3 flex flex-col items-center justify-center">
+            <div class="flex flex-col items-start">
+                <!-- NAME TYPOGRAPHY -->
+                <div
+                    class="text-9xl md:text-9xl font-bold tracking-wide pb-[1.2rem] leading-[0.9] font-test"
+                >
+                    <span class="block">Josh</span>
+                    <span class="block">Cemine</span>
+                </div>
+                <!-- JOB DESCRIPTION TYPOGRAPHY -->
+                <h2 class="tracking-[0.75em] text-xl font-test">
+                    FULLSTACK DEVELOPER
+                </h2>
+            </div>
+        </div>
+        <!-- RIGHT CONTENT -->
+        <div class="col-span-2 flex items-start">
+            <div class="col-span-2 flex items-start">
+                <div
+                    class="relative group w-[24em] h-[24em] border-8 border-[#2D2327] rounded-full overflow-hidden bg-white/60 ')]"
+                >
+                    <Image
+                        src={devImage}
+                        alt="The developer"
+                        class="absolute object-cover inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition-opacity duration-250"
+                    />
+                    <Image
+                        src={devImageHover}
+                        alt="The developer - hover state"
+                        class="absolute object-cover inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-250"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

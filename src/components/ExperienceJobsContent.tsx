@@ -1,0 +1,27 @@
+import { jobs } from "../data/data"
+
+const JobsContent = () => {
+    return (
+        <ul class={"ml-20 pt-5 border-l-3 border-black"}>
+            {jobs.map(e => (
+                <li class={"relative pb-5"}>
+                    <div class={"absolute -left-8.5 top-1 w-16 h-16 flex items-center justify-center rounded-full bg-white"}>
+                        <img
+                            src={e.picture}
+                            alt="A picture of the developer"
+                            id="dev-image"
+                        />
+                    </div>
+                    <div class={"ml-10 flex flex-1 flex-col justify-start gap-1"}>
+                        <p class={'text-xs'}>{e.period}</p>
+                        <h2 class={'text-m'}>{e.company}</h2>
+                        <p class={"text-xs"}>{e.role}</p>
+                        <p>Sed euismod mauris tortor, et pellentesque nunc dignissim vitae. Quisque ultrices, nisi rutrum gravida accumsan. </p>
+                    </div>
+                </li>
+            ))}
+        </ul>
+    )
+}
+
+export default JobsContent

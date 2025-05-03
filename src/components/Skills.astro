@@ -1,0 +1,8 @@
+---
+import { skills } from "../data/data";
+import SkillsCards from "./SkillsCards.astro";
+---
+
+<div id="container" class="flex flex-wrap justify-around p-15 m-20 gap-16">
+    {skills.map((skill) => <SkillsCards {skill} />)}
+</div>

@@ -1,0 +1,9 @@
+---
+import type { Skill } from "../data/data";
+const { skill } = Astro.props as { skill: Skill };
+---
+
+<div class="">
+    <img src={skill.picture} alt="A" />
+    <h1>{skill.name}</h1>
+</div>
