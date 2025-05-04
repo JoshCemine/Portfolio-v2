@@ -1,0 +1,33 @@
+---
+import type { Project } from "../data/data";
+const { projects } = Astro.props as { projects: Project };
+---
+
+<a
+    href="#"
+    class=`glass-white gborder-white gshadow rounded-md items-center w-64 h-84`
+>
+    <div
+        class=`h-2/5 overflow-hidden items-center flex justify-center bg-center bg-cover`
+        style={`background-image: url(${projects.image});`}
+    >
+        <!-- <img src={projects.image} alt="A" /> -->
+    </div>
+    <div
+        class="h-3/5 p-3 text-white/90 text-wrap flex flex-col justify-between"
+    >
+        <div>
+            <h1 class="font-bold text-xl">{projects.title}</h1>
+            <p>{projects.description}</p>
+        </div>
+        <div class="flex flex-wrap">
+            {
+                projects.tags.map((tag) => (
+                    <p class="text-xs p-0.75 mr-1 bg-[#2D2327]/80 rounded-md text-nowrap">
+                        {tag}
+                    </p>
+                ))
+            }
+        </div>
+    </div>
+</a>

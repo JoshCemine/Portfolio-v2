@@ -1,14 +1,8 @@
 ---
 import { projects } from "../data/data";
+import ProjectsCards from "./ProjectsCards.astro";
 ---
 
-<div id="container" class="p-15 m-20">
-	{
-		projects.map((project, i) => (
-			<div class="project-card">
-				<h2>{project.title}</h2>
-				{/* <p>{project.description}</p> */}
-			</div>
-		))
-	}
+<div id="container" class="flex flex-wrap justify-around p-15 m-10 gap-6">
+	{projects.map((projects) => <ProjectsCards {projects} />)}
 </div>
