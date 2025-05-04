@@ -3,7 +3,9 @@ import type { Skill } from "../data/data";
 const { skill } = Astro.props as { skill: Skill };
 ---
 
-<div class="">
+<div
+    class="glass-white gborder-white gshadow rounded-md p-5 items-center text-center"
+>
     <img src={skill.picture} alt="A" />
     <h1>{skill.name}</h1>
 </div>

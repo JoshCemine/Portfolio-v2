@@ -6,7 +6,7 @@ export default function Experience() {
     const [isJobsTabActive, setJobsTabActive] = useState(true)
     return (
         <div class="flex  items-center justify-center flex-col p-15 m-20">
-            <div class={'w-full  sm:bg-blue-900 md:w-full md:bg-red-600 lg:w-[50em] lg:bg-green-700'}>
+            <div class={'w-full '}>
                 {/* <!-- HEADER SECTION --> */}
                 <div class="border-4 rounded-t-lg border-black flex justify-evenly mb-2 bg-white font-bold">
                     {/* <!-- JOBS TAB --> */}
@@ -26,7 +26,8 @@ export default function Experience() {
                 </div>
 
                 {/* <!-- CONTENT SECTION --> */}
-                <div class="border-4 rounded-b-lg border-black">
+                {/* <div class="border-4 rounded-b-lg border-black bg-black/20 backdrop-blur-sm text-white  "> */}
+                <div class="rounded-b-lg gborder-black glass-black gshadow text-white  ">
                     {isJobsTabActive ? <JobsContent /> : <EducationContent />}
                 </div>
             </div>

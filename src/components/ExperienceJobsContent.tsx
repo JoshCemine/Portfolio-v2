@@ -16,7 +16,7 @@ const JobsContent = () => {
                         <p class={'text-xs'}>{e.period}</p>
                         <h2 class={'text-m'}>{e.company}</h2>
                         <p class={"text-xs"}>{e.role}</p>
-                        <p>Sed euismod mauris tortor, et pellentesque nunc dignissim vitae. Quisque ultrices, nisi rutrum gravida accumsan. </p>
+                        <p>{e.description} </p>
                     </div>
                 </li>
             ))}

@@ -7,6 +7,26 @@
     --font-wa: "Coral Pixels", serif;
 }
 
+.glass-white {
+    @apply bg-white/20 backdrop-blur-sm;
+}
+
+.gborder-white {
+    @apply border-1 border-white/20
+}
+
+.glass-black {
+    @apply bg-black/20 backdrop-blur-sm;
+}
+
+.gborder-black {
+    @apply border-1 border-black/20
+}
+
+.gshadow {
+    @apply shadow-2xl shadow-white/30
+}
+
 html {
     padding: 0;
     margin: 0;
