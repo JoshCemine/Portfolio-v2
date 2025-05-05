@@ -5,30 +5,38 @@ import EducationContent from "./ExperienceEducationContent";
 export default function Experience() {
     const [isJobsTabActive, setJobsTabActive] = useState(true)
     return (
-        <div class="flex  items-center justify-center flex-col p-15 m-20">
-            <div class={'w-full '}>
-                {/* <!-- HEADER SECTION --> */}
-                <div class="border-4 rounded-t-lg border-black flex justify-evenly mb-2 bg-white font-bold">
-                    {/* <!-- JOBS TAB --> */}
-                    <div
-                        className={`cursor-pointer flex justify-center w-1/2 ${isJobsTabActive ? 'experience-tab-active' : ''}`}
-                        onClick={() => setJobsTabActive(true)}
-                    >
-                        <p className={`align-middle ${isJobsTabActive ? 'text-white' : 'text-black'}`}>JOBS</p>
-                    </div>
-                    {/* <!-- EDUCATION TAB --> */}
-                    <div
-                        className={`cursor-pointer flex justify-center w-1/2 ${isJobsTabActive ? '' : 'experience-tab-active'}`}
-                        onClick={() => setJobsTabActive(false)}
-                    >
-                        <span className={`${isJobsTabActive ? 'text-black' : 'text-white'}`}>EDUCATION</span>
-                    </div>
-                </div>
+        <div id={"experience-container"} className={"section-container"}>
+            <h1 className={"section-header"}>EXPERIENCE</h1>
+            <div className={"flex  items-center justify-center flex-col "}>
+                <div className={'w-full '}>
+                    {/* <!-- HEADER SECTION --> */}
+                    <div className="rounded-t-lg gborder-black glass-black flex justify-evenly mb-2 font-bold relative">
+                        {/* Sliding indicator */}
+                        <div
+                            className={`absolute bottom-0 h-1 bg-white/80 transition-all duration-200 ease-in-out ${isJobsTabActive ? 'left-0 w-1/2' : 'left-1/2 w-1/2'}`}
+                        ></div>
 
-                {/* <!-- CONTENT SECTION --> */}
-                {/* <div class="border-4 rounded-b-lg border-black bg-black/20 backdrop-blur-sm text-white  "> */}
-                <div class="rounded-b-lg gborder-black glass-black gshadow text-white  ">
-                    {isJobsTabActive ? <JobsContent /> : <EducationContent />}
+                        {/* JOBS TAB */}
+                        <div
+                            className={`cursor-pointer flex justify-center w-1/2 rounded-tl-lg py-2 z-10 ${isJobsTabActive ? 'text-white' : 'text-white/50'}`}
+                            onClick={() => setJobsTabActive(true)}
+                        >
+                            <p>JOBS</p>
+                        </div>
+
+                        {/* EDUCATION TAB */}
+                        <div
+                            className={`cursor-pointer flex justify-center w-1/2 rounded-tr-lg py-2 z-10 ${isJobsTabActive ? 'text-white/50' : 'text-white'}`}
+                            onClick={() => setJobsTabActive(false)}
+                        >
+                            <span>EDUCATION</span>
+                        </div>
+                    </div>
+
+                    {/* <!-- CONTENT SECTION --> */}
+                    <div className={"rounded-b-lg gborder-black glass-black gshadow text-white  "}>
+                        {isJobsTabActive ? <JobsContent /> : <EducationContent />}
+                    </div>
                 </div>
             </div>
         </div>

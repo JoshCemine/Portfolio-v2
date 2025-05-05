@@ -3,6 +3,9 @@ import { skills } from "../data/data";
 import SkillsCards from "./SkillsCards.astro";
 ---
 
-<div id="container" class="flex flex-wrap justify-around p-15 m-20 gap-8">
-    {skills.map((skill) => <SkillsCards {skill} />)}
+<div id="skills-container" class="section-container">
+    <h1 class="section-header">SKILLS</h1>
+    <div class="flex flex-wrap gap-4">
+        {skills.map((skill) => <SkillsCards {skill} />)}
+    </div>
 </div>

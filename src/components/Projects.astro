@@ -3,6 +3,9 @@ import { projects } from "../data/data";
 import ProjectsCards from "./ProjectsCards.astro";
 ---
 
-<div id="container" class="flex flex-wrap justify-around p-15 m-10 gap-6">
-	{projects.map((projects) => <ProjectsCards {projects} />)}
+<div id="projects-container" class="section-container">
+	<h1 class="section-header">PROJECTS</h1>
+	<div class="flex flex-wrap justify-around gap-6">
+		{projects.map((projects) => <ProjectsCards {projects} />)}
+	</div>
 </div>

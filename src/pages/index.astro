@@ -4,7 +4,7 @@ import Hero from "../components/Hero.astro";
 import Experience from "../components/Experience.tsx";
 import Skills from "../components/Skills.astro";
 import Projects from "../components/Projects.astro";
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.astro";
 
 import Layout from "../layouts/Layout.astro";
@@ -13,9 +13,18 @@ import Temp from "../components/Temp.astro";
 
 <Layout>
 	<Hero />
+	<!-- <div class="w-1/5 h-[100%]"><Navbar /></div>
 	<div class="sm:flex md:grid grid-cols-5">
-		<div class="md:col-span-1"><Navbar /></div>
 		<div class="md:col-span-4">
+			<Experience client:load />
+			<Skills />
+			<Projects />
+			<Temp />
+		</div>
+	</div> -->
+	<Navbar client:load />
+	<div class="w-full flex justify-end items-end">
+		<div class="w-4/5">
 			<Experience client:load />
 			<Skills />
 			<Projects />

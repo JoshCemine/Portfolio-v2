@@ -27,6 +27,18 @@
     @apply shadow-2xl shadow-white/30
 }
 
+.section-header {
+    @apply text-7xl text-white/95 font-test pb-12
+}
+
+.section-container {
+    @apply p-35
+}
+
+@keyframes tabChange {}
+
+@keyframes contentChange {}
+
 html {
     padding: 0;
     margin: 0;
@@ -52,4 +64,5 @@ body {
 
 .experience-tab-active {
     background: #2D2327;
+
 }
