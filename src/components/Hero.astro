@@ -3,14 +3,7 @@ import { Image } from "astro:assets";
 import devImage from "/src/assets/DevImage.png";
 import devImageHover from "/src/assets/DevImageHover.png";
 
-const svgOptions = {
-    svgSize: "6",
-};
-
-import FacebookIcon from "./icons/FacebookIcon.astro";
-import GithubIcon from "./icons/GithubIcon.astro";
-import LinkedInIcon from "./icons/LinkedInIcon.astro";
-import MailIcon from "./icons/MailIcon.astro";
+import Resume from "/src/assets/Resume.pdf";
 ---
 
 <!-- HERO CONTAINER -->
@@ -37,7 +30,8 @@ import MailIcon from "./icons/MailIcon.astro";
                 <!-- CONTACT ME SECTION -->
                 <div class="my-6 flex">
                     <a
-                        href="#"
+                        href={Resume}
+                        download
                         class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors border border-input shadow-sm h-9 px-4 py-2 hover:bg-white/40"
                         ><span class="font-semibold">Resume</span><svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +59,7 @@ import MailIcon from "./icons/MailIcon.astro";
                             target="_blank"
                             rel="noopener noreferrer"
                             class=`w-6 h-6 group`
+                            aria-label="Facebook Link"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -221,6 +216,7 @@ import MailIcon from "./icons/MailIcon.astro";
                             target="_blank"
                             rel="noopener noreferrer"
                             class=`w-6 h-6 group`
+                            aria-label="Github Link"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -241,6 +237,7 @@ import MailIcon from "./icons/MailIcon.astro";
                             target="_blank"
                             rel="noopener noreferrer"
                             class=`w-6 h-6 group`
+                            aria-label="LinkedIn Link"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -259,6 +256,7 @@ import MailIcon from "./icons/MailIcon.astro";
                         <a
                             href="mailto:https://mail.google.com/mail/u/2/#inbox"
                             class=`w-6 h-6 group`
+                            aria-label="Mail Link"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -289,11 +287,13 @@ import MailIcon from "./icons/MailIcon.astro";
                 >
                     <Image
                         src={devImage}
+                        loading={"eager"}
                         alt="The developer"
                         class="absolute object-cover inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition-opacity duration-250"
                     />
                     <Image
                         src={devImageHover}
+                        loading={"eager"}
                         alt="The developer - hover state"
                         class="absolute object-cover inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-250"
                     />

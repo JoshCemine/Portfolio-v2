@@ -1,3 +1,5 @@
+const buildUrlBase = "portfolio";
+
 interface Project {
     id: number;
     title: string;
@@ -5,7 +7,6 @@ interface Project {
     tags: string[];
     image: string;
     github?: string;
-    demo?: string | null;
 }
 
 interface Job {
@@ -36,229 +37,183 @@ interface Skill {
 const education: Education[] = [
     {
         "id": 1,
-        "degree": "Bachelor of Science in Computer Science",
+        "degree": "B.S. Computer Science",
         "institution": "University of the Philippines",
-        "period": "2019 – 2023",
-        "picture": "/src/assets/miku.png",
+        "period": "September 2020 - July 2024",
+        "picture": `/${buildUrlBase}/experience/UP.png`,
         "achievements": [
-            "Graduated with honors (Magna Cum Laude)",
-            "Thesis: AI-based traffic prediction system"
+            "GPA: 1.6",
+            "Committee Head of UP Serenata, the school choir that performed in multiple interschool competitions",
+            "Science Federation and Google Developer Student Club member"
         ]
     },
     {
         "id": 2,
-        "degree": "Advanced Diploma in Web Development",
-        "institution": "CodeCamp PH",
-        "period": "2018 – 2019",
-        "picture": "/src/assets/miku.png",
-        "achievements": [
-            "Top 5% of cohort",
-            "Built 15+ projects with MERN stack"
-        ]
-    },
-    {
-        "id": 3,
-        "degree": "High School Diploma (STEM Track)",
-        "institution": "Manila Science High School",
-        "period": "2015 – 2019",
-        "picture": "/src/assets/miku.png",
-        "achievements": [
-            "Robotics competition winner (2018)"
-        ]
+        "degree": "TVL - Information and Communication Technology",
+        "institution": "Tagbilaran City Science High School",
+        "period": "August 2018 - July 2020",
+        "picture": `/${buildUrlBase}/experience/TCSHS.png`,
+        "achievements": []
     }
 ]
 
 const jobs: Job[] = [
     {
         "id": 1,
-        "role": "Full-Stack Developer",
-        "company": "TechNova Solutions",
-        "period": "2023 – Present",
-        "picture": "/src/assets/miku.png",
-        "description": "Build and maintain scalable web apps using React, Node.js, and AWS. Lead a team of 3 developers to deliver client projects.",
-        "tags": ["React", "Node.js", "AWS", "Agile"]
+        "role": "Intern",
+        "company": "Devsoft PH",
+        "period": "August 2024 – Dec. 2024",
+        "picture": `/${buildUrlBase}/experience/DevSoftPH.jpg`,
+        "description": "Provided technical support by troubleshooting customer issues and debugging Express.js and jQuery-related problems in the company’s product, improving user experience.",
+        "tags": ["React", "Angular", "JQuery"]
     },
     {
         "id": 2,
-        "role": "Frontend Developer",
-        "company": "PixelCraft Studios",
-        "period": "2021 – 2023",
-        "picture": "/src/assets/miku.png",
-        "description": "Designed UI/UX for 10+ client websites using Next.js and Figma. Improved page load speed by 40%.",
-        "tags": ["Next.js", "Figma", "Tailwind CSS"]
+        "role": "Intern",
+        "company": "Old St. Labs",
+        "period": "July 2023 – Sept. 2023",
+        "picture": `/${buildUrlBase}/experience/OldStLabs.png`,
+        "description": "Collaborated with senior developers to build a full-stack application, enhancing frontend design and integrating RESTful APIs using React, Express.js, NestJS, and Nx Workspace.",
+        "tags": ["React", "Express", "Nest", "NxWorkspace"]
     },
     {
         "id": 3,
-        "role": "Backend Intern",
-        "company": "DataDynamo",
-        "period": "2020 – 2021",
-        "picture": "/src/assets/miku.png",
-        "description": "Developed RESTful APIs with Python/Django and optimized database queries for analytics tools.",
-        "tags": ["Python", "Django", "PostgreSQL"]
-    },
-    {
-        "id": 4,
-        "role": "Freelance Web Developer",
-        "company": "Self-Employed",
-        "period": "2019 – 2020",
-        "picture": "/src/assets/miku.png",
-        "description": "Built custom websites for small businesses using WordPress and vanilla JavaScript.",
-        "tags": ["WordPress", "JavaScript", "CSS3"]
-    },
-    {
-        "id": 5,
-        "role": "IT Support Technician",
-        "company": "UrbanTech Solutions",
-        "period": "2018 – 2019",
-        "picture": "/src/assets/miku.png",
-        "description": "Provided tech support and maintained company websites. Automated internal workflows with Python scripts.",
-        "tags": ["Helpdesk", "Python", "HTML/CSS"]
+        "role": "Intern",
+        "company": "GWION Solutions",
+        "period": "March 2020 – June 2020",
+        "picture": `/${buildUrlBase}/experience/Gwion.jpg`,
+        "description": "Developed the frontend for a real estate platform (property sales & rentals) using WordPress, implementing custom theme modifications for improved UI/UX.",
+        "tags": ["WordPress", "PHP", "JavaScript", "JQuery"]
     }
 ]
 
 const projects: Project[] = [
     {
         "id": 1,
-        "title": "WeatherWave",
-        "description": "A sleek weather app with real-time forecasts and animated backgrounds.",
-        "tags": ["React", "OpenWeather API", "Tailwind CSS"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/weatherwave",
-        "demo": "https://weatherwave-demo.vercel.app"
+        "title": "Project Ceboom",
+        "description": "React and Express project for optimal city routing.",
+        "tags": ["ReactJS", "ExpressJS", "AWS"],
+        "image": `/${buildUrlBase}/projects/Ceboom.png`,
+        "github": "https://github.com/sansqed/project-ceboom"
     },
     {
         "id": 2,
-        "title": "TaskTitan",
-        "description": "A productivity app with drag-and-drop task management and Pomodoro timer.",
-        "tags": ["TypeScript", "Next.js", "Firebase"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/tasktitan",
-        "demo": "https://tasktitan.vercel.app"
+        "title": "College of Science Automatic Request System",
+        "description": "School form request web app with real-time approval tracking and progress monitoring.",
+        "tags": ["ReactJS", "ExpressJS", "AWS"],
+        "image": `/${buildUrlBase}/projects/CROMA.jpg`,
+        "github": "https://github.com/johnochea/croma"
     },
     {
         "id": 3,
-        "title": "PixelPortfolio",
-        "description": "A minimalist portfolio template for creatives, with dark/light mode.",
-        "tags": ["Astro", "CSS3", "GSAP"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/pixelportfolio",
-        "demo": "https://pixelportfolio.netlify.app"
-    },
-    {
-        "id": 4,
-        "title": "RecipeRadar",
-        "description": "AI-powered recipe generator based on ingredients you have at home.",
-        "tags": ["Python", "Flask", "OpenAI API"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/reciperadar",
-        "demo": "https://reciperadar.onrender.com"
-    },
-    {
-        "id": 5,
-        "title": "ChatterBox",
-        "description": "Real-time chat app with E2E encryption and reaction emojis.",
-        "tags": ["Socket.io", "Node.js", "MongoDB"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/chatterbox",
-        "demo": "https://chatterbox.fly.dev"
-    },
-    {
-        "id": 6,
-        "title": "FitTrack",
-        "description": "Fitness tracker with workout logging and progress analytics.",
-        "tags": ["React Native", "Express", "PostgreSQL"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/fittrack",
-        "demo": null
-    },
-    {
-        "id": 7,
-        "title": "NFT Gallery",
-        "description": "Showcase and filter NFT collections from OpenSea’s API.",
-        "tags": ["Vue.js", "Web3.js", "Pinia"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/nft-gallery",
-        "demo": "https://nft-gallery-demo.vercel.app"
-    },
-    {
-        "id": 8,
-        "title": "BudgetBuddy",
-        "description": "Personal finance manager with expense categorization and charts.",
-        "tags": ["Svelte", "D3.js", "Supabase"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/budgetbuddy",
-        "demo": "https://budgetbuddy.fly.dev"
-    },
-    {
-        "id": 9,
-        "title": "MovieMash",
-        "description": "Compare movies side-by-side with ratings, trailers, and trivia.",
-        "tags": ["Angular", "TMDB API", "RxJS"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/moviemash",
-        "demo": "https://moviemash.netlify.app"
-    },
-    {
-        "id": 10,
-        "title": "DevDiaries",
-        "description": "A Markdown-powered blog for developers, with syntax highlighting.",
-        "tags": ["Astro", "Markdown", "Prism.js"],
-        "image": "/src/assets/miku.png",
-        "github": "https://github.com/yourusername/devdiaries",
-        "demo": "https://devdiaries.vercel.app"
+        "title": "CROCS vs PNGs",
+        "description": "A Godot tower defense game.",
+        "tags": ["Godot"],
+        "image": `/${buildUrlBase}/projects/CrocsVsPng.jpg`,
+        "github": "https://github.com/naixsu/crocpng"
     }
 ];
 
 const skills: Skill[] = [
     {
-        id: 1,
-        name: "TypeScript",
-        picture: "/src/assets/miku.png"
+        "id": 1,
+        "name": "HTML",
+        "picture": ""
     },
     {
-        id: 2,
-        name: "React",
-        picture: "/src/assets/miku.png"
+        "id": 2,
+        "name": "CSS",
+        "picture": ""
     },
     {
-        id: 3,
-        name: "Node.js",
-        picture: "/src/assets/miku.png"
+        "id": 3,
+        "name": "JavaScript",
+        "picture": ""
     },
     {
-        id: 4,
-        name: "GraphQL",
-        picture: "/src/assets/miku.png"
+        "id": 4,
+        "name": "TypeScript",
+        "picture": ""
     },
     {
-        id: 5,
-        name: "Tailwind CSS",
-        picture: "/src/assets/miku.png"
+        "id": 5,
+        "name": "Node",
+        "picture": ""
     },
     {
-        id: 6,
-        name: "Docker",
-        picture: "/src/assets/miku.png"
+        "id": 6,
+        "name": "React",
+        "picture": ""
     },
     {
-        id: 7,
-        name: "PostgreSQL",
-        picture: "/src/assets/miku.png"
+        "id": 7,
+        "name": "Angular",
+        "picture": ""
     },
     {
-        id: 8,
-        name: "AWS",
-        picture: "/src/assets/miku.png"
+        "id": 8,
+        "name": "Express",
+        "picture": ""
     },
     {
-        id: 9,
-        name: "Jest",
-        picture: "/src/assets/miku.png"
+        "id": 9,
+        "name": "NextJS",
+        "picture": ""
     },
     {
-        id: 10,
-        name: "Git",
-        picture: "/src/assets/miku.png"
+        "id": 10,
+        "name": "Astro",
+        "picture": ""
+    },
+    {
+        "id": 11,
+        "name": "TailwindCSS",
+        "picture": ""
+    },
+    {
+        "id": 12,
+        "name": "PHP",
+        "picture": ""
+    },
+    {
+        "id": 13,
+        "name": "Wordpress",
+        "picture": ""
+    },
+    {
+        "id": 14,
+        "name": "MongoDB",
+        "picture": ""
+    },
+    {
+        "id": 15,
+        "name": "SQL",
+        "picture": ""
+    },
+    {
+        "id": 16,
+        "name": "Python",
+        "picture": ""
+    },
+    {
+        "id": 17,
+        "name": "Numpy",
+        "picture": ""
+    },
+    {
+        "id": 18,
+        "name": "Pandas",
+        "picture": ""
+    },
+    {
+        "id": 19,
+        "name": "Godot",
+        "picture": ""
+    },
+    {
+        "id": 20,
+        "name": "Git",
+        "picture": ""
     }
 ];
 

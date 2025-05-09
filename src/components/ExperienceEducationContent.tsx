@@ -1,4 +1,7 @@
-import { education } from "../data/data";
+import { education } from "../data/data.ts";
+import DynamicImage from "./DynamicImage.astro";
+
+
 
 const EducationContent = () => {
     return (
@@ -8,8 +11,8 @@ const EducationContent = () => {
                     <div class={"absolute -left-8.5 top-1 w-16 h-16 flex items-center justify-center rounded-full overflow-hidden bg-white/20 backdrop-blur-xl shadow-lg shadow-white/25  "}>
                         <img
                             src={e.picture}
-                            alt="A picture of the developer"
-                            id="dev-image"
+                            loading={"lazy"}
+                            alt={`${e.institution} Logo`}
                         />
                     </div>
                     <div class={"ml-10 flex flex-1 flex-col justify-start gap-1"}>

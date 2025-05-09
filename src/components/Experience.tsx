@@ -34,7 +34,7 @@ export default function Experience() {
                     </div>
 
                     {/* <!-- CONTENT SECTION --> */}
-                    <div className={"rounded-b-lg gborder-white glass-white gshadow text-white  "}>
+                    <div className={"rounded-b-lg gborder-black glass-black gshadow text-white  "}>
                         {isJobsTabActive ? <JobsContent /> : <EducationContent />}
                     </div>
                 </div>
