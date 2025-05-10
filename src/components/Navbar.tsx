@@ -5,7 +5,7 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState("");
 
     useEffect(() => {
-        const showAfter = window.innerHeight * 0.90;
+        const showAfter = window.innerHeight * 0.80;
 
         // Handle navbar visibility
         function handleNavVisibility() {
@@ -59,7 +59,7 @@ const Navbar = () => {
     return (
         <div
             class={`fixed top-1/2 transform -translate-y-1/2 text-white 
-                   transition-all duration-300 ease-in-out hidden md:block
+                   transition-all duration-300 ease-in-out hidden md:block 2xl:hidden
                    ${visible ? 'opacity-100 visible' : 'opacity-0 invisible delay-50'}`}
         >
             <div class="flex flex-col font-extrabold text-2xl font-test p-4 pl-12 [&>*]:pb-3">

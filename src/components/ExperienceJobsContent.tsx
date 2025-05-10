@@ -2,7 +2,7 @@ import { jobs } from "../data/data"
 
 const JobsContent = () => {
     return (
-        <ul class={"ml-20 pt-5 border-l-2 border-white/50"}>
+        <ul class={"ml-20 pt-5 border-l-2 border-white/50 pr-10"}>
             {jobs.map(e => (
                 <li class={"relative pb-5"}>
                     <div class={"absolute -left-8.25 top-1 w-16 h-16 flex items-center justify-center rounded-full overflow-hidden bg-black/20 backdrop-blur-xl shadow-lg shadow-white/25  "}>

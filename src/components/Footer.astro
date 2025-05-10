@@ -6,9 +6,11 @@ const svgOptions = {
 
 <footer class="w-full px-16 h-28">
     <div class="bg-white/40 rounded-full w-full h-1"></div>
-    <div class="flex justify-between">
+    <div
+        class="flex flex-col justify-center items-center md:items-start md:flex-row md:justify-between"
+    >
         <!-- SVG ICONS -->
-        <div class="flex gap-5 p-6">
+        <div class="flex gap-5 p-2 md:p-6">
             <!-- FACEBOOK ICON -->
             <a
                 href="https://www.facebook.com/JoshCemin"
@@ -234,11 +236,12 @@ const svgOptions = {
         </div>
 
         <!-- BACKGROUND RECOGNITION -->
-        <div class="flex items-center text-white/60 font-bold p-6">
+        <div class="flex items-center text-white/60 font-bold p-2 md:p-6">
             <p>
                 Background by <a
                     href="https://github.com/ImBaedin/Thpace"
-                    class="underline hover:text-white">ImBaedin</a
+                    class="underline hover:text-white transition-colors duration-250"
+                    >ImBaedin</a
                 >
             </p>
         </div>

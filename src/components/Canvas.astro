@@ -4,17 +4,24 @@
 
 <script>
     import { ThpaceGL } from "thpace";
-    let canvas: any = null;
     document.addEventListener("DOMContentLoaded", () => {
-        canvas = document.querySelector("#space-canvas");
-        console.log(canvas);
+        const canvas = document.getElementById("space-canvas");
+        if (!(canvas instanceof HTMLCanvasElement)) {
+            console.error("Canvas element not found");
+            return;
+        }
+
         const settings = {
             colors: ["#b5c2b7", "#2d2327", "#b5c2b7"],
             triangleSize: 100,
+            maxFps: "60",
+            // automaticResize: false,
         };
 
-        ThpaceGL.create(canvas, settings);
+        try {
+            ThpaceGL.create(canvas, settings);
+        } catch (error) {}
     });
 </script>
 
-<canvas id="space-canvas"> </canvas>
+<canvas id="space-canvas"></canvas>

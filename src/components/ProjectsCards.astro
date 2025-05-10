@@ -11,7 +11,7 @@ const { projects } = Astro.props as { projects: Project };
 >
     <!-- Image container - will show on sm screens and up -->
     <div
-        class="hidden sm:block h-16 md:h-42 w-full overflow-hidden bg-center bg-cover"
+        class="hidden sm:block h-32 md:h-42 w-full overflow-hidden bg-center bg-cover"
         style={`background-image: url(${projects.image});`}
     >
     </div>
@@ -19,8 +19,8 @@ const { projects } = Astro.props as { projects: Project };
     <!-- Content container -->
     <div class="flex flex-col justify-between p-3 text-white/90 h-full">
         <div>
-            <h1 class="font-bold text-xl">{projects.title}</h1>
-            <p class="mb-2">{projects.description}</p>
+            <h1 class="font-bold text-lg md:text-xl">{projects.title}</h1>
+            <p class="mb-2 text-sm md:text-md">{projects.description}</p>
         </div>
 
         <!-- Tags container - now properly at bottom -->
@@ -28,7 +28,7 @@ const { projects } = Astro.props as { projects: Project };
             <!-- mt-auto pushes to bottom -->
             {
                 projects.tags.map((tag) => (
-                    <span class="text-xs px-2 py-1 bg-[#2D2327]/80 rounded-md">
+                    <span class="text-[0.55rem] md:text-xs px-2 py-1 bg-[#2D2327]/80 rounded-md">
                         {tag}
                     </span>
                 ))

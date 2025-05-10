@@ -4,8 +4,10 @@ import ProjectsCards from "./ProjectsCards.astro";
 ---
 
 <div id="projects-container" class="section-container">
-	<h1 class="section-header">PROJECTS</h1>
-	<div class="flex flex-wrap justify-around gap-6">
-		{projects.map((projects) => <ProjectsCards {projects} />)}
+	<div class="max-w">
+		<h1 class="section-header w-full">PROJECTS</h1>
+		<div class="flex flex-wrap justify-around gap-6">
+			{projects.map((projects) => <ProjectsCards {projects} />)}
+		</div>
 	</div>
 </div>

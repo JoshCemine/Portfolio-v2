@@ -1,4 +1,4 @@
-const buildUrlBase = "portfolio";
+const buildUrlBase = "";
 
 interface Project {
     id: number;
@@ -40,7 +40,7 @@ const education: Education[] = [
         "degree": "B.S. Computer Science",
         "institution": "University of the Philippines",
         "period": "September 2020 - July 2024",
-        "picture": `/${buildUrlBase}/experience/UP.png`,
+        "picture": `${buildUrlBase}/experience/UP.png`,
         "achievements": [
             "GPA: 1.6",
             "Committee Head of UP Serenata, the school choir that performed in multiple interschool competitions",
@@ -52,7 +52,7 @@ const education: Education[] = [
         "degree": "TVL - Information and Communication Technology",
         "institution": "Tagbilaran City Science High School",
         "period": "August 2018 - July 2020",
-        "picture": `/${buildUrlBase}/experience/TCSHS.png`,
+        "picture": `${buildUrlBase}/experience/TCSHS.png`,
         "achievements": []
     }
 ]
@@ -63,7 +63,7 @@ const jobs: Job[] = [
         "role": "Intern",
         "company": "Devsoft PH",
         "period": "August 2024 – Dec. 2024",
-        "picture": `/${buildUrlBase}/experience/DevSoftPH.jpg`,
+        "picture": `${buildUrlBase}/experience/DevSoftPH.jpg`,
         "description": "Provided technical support by troubleshooting customer issues and debugging Express.js and jQuery-related problems in the company’s product, improving user experience.",
         "tags": ["React", "Angular", "JQuery"]
     },
@@ -72,7 +72,7 @@ const jobs: Job[] = [
         "role": "Intern",
         "company": "Old St. Labs",
         "period": "July 2023 – Sept. 2023",
-        "picture": `/${buildUrlBase}/experience/OldStLabs.png`,
+        "picture": `${buildUrlBase}/experience/OldStLabs.png`,
         "description": "Collaborated with senior developers to build a full-stack application, enhancing frontend design and integrating RESTful APIs using React, Express.js, NestJS, and Nx Workspace.",
         "tags": ["React", "Express", "Nest", "NxWorkspace"]
     },
@@ -81,7 +81,7 @@ const jobs: Job[] = [
         "role": "Intern",
         "company": "GWION Solutions",
         "period": "March 2020 – June 2020",
-        "picture": `/${buildUrlBase}/experience/Gwion.jpg`,
+        "picture": `${buildUrlBase}/experience/Gwion.jpg`,
         "description": "Developed the frontend for a real estate platform (property sales & rentals) using WordPress, implementing custom theme modifications for improved UI/UX.",
         "tags": ["WordPress", "PHP", "JavaScript", "JQuery"]
     }
@@ -93,7 +93,7 @@ const projects: Project[] = [
         "title": "Project Ceboom",
         "description": "React and Express project for optimal city routing.",
         "tags": ["ReactJS", "ExpressJS", "AWS"],
-        "image": `/${buildUrlBase}/projects/Ceboom.png`,
+        "image": `${buildUrlBase}/projects/Ceboom.png`,
         "github": "https://github.com/sansqed/project-ceboom"
     },
     {
@@ -101,7 +101,7 @@ const projects: Project[] = [
         "title": "College of Science Automatic Request System",
         "description": "School form request web app with real-time approval tracking and progress monitoring.",
         "tags": ["ReactJS", "ExpressJS", "AWS"],
-        "image": `/${buildUrlBase}/projects/CROMA.jpg`,
+        "image": `${buildUrlBase}/projects/CROMA.jpg`,
         "github": "https://github.com/johnochea/croma"
     },
     {
@@ -109,8 +109,16 @@ const projects: Project[] = [
         "title": "CROCS vs PNGs",
         "description": "A Godot tower defense game.",
         "tags": ["Godot"],
-        "image": `/${buildUrlBase}/projects/CrocsVsPng.jpg`,
+        "image": `${buildUrlBase}/projects/CrocsVsPng.jpg`,
         "github": "https://github.com/naixsu/crocpng"
+    },
+    {
+        "id": 4,
+        "title": "This Portfolio Website",
+        "description": "A website made with Astro, React and TailwindCSS and Hosted on a DigitalOcean droplet using Nginx",
+        "tags": ["Astro", "React", "TailwindCSS"],
+        "image": `${buildUrlBase}/projects/Portfoliov2.png`,
+        "github": "https://github.com/JoshCemine/Portfolio-v2"
     }
 ];
 
