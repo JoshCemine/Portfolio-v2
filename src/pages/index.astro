@@ -17,13 +17,13 @@ import "../styles/global.css";
 	<Hero />
 	<Navbar client:load />
 	<div
-		class="w-full flex justify-end lg:justify-center items-end lg:items-center"
+		class="w-full flex flex-col justify-end lg:justify-center items-end lg:items-center"
 	>
 		<div class="w-full md:w-4/5 larger-content">
 			<Experience client:load />
 			<Skills />
 			<Projects />
 		</div>
+		<Footer />
 	</div>
-	<Footer />
 </Layout>

@@ -35,7 +35,7 @@
 }
 
 .section-container {
-    @apply p-10 sm:p-15 md:p-25 md:pr-15 lg:p-35 pt-10 min-w-200 max-w-350 2xl:w-full 2xl:flex 2xl:flex-col 2xl:items-start
+    @apply p-10 sm:p-15 md:p-25 md:pr-15 lg:p-35 pt-10 min-w-xs max-w-350 w-full 2xl:flex 2xl:flex-col 2xl:items-start
 }
 
 @keyframes tabChange {}
