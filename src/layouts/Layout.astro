@@ -27,11 +27,28 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
+	<body
+		class="bg-[#1C1518] font-sans leading-relaxed text-stone-400 antialiased selection:bg-amber-300 selection:text-stone-900"
+	>
+		<!-- Mouse spotlight -->
+		<div
+			id="spotlight"
+			class="pointer-events-none fixed inset-0 z-30 transition duration-300"
+			aria-hidden="true"
+		>
+		</div>
 		<slot />
+		<script>
+			const spot = document.getElementById("spotlight");
+			if (spot) {
+				window.addEventListener("mousemove", (e) => {
+					spot.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(214, 170, 100, 0.05), transparent 80%)`;
+				});
+			}
+		</script>
 	</body>
 </html>

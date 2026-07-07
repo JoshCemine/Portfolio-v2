@@ -13,6 +13,7 @@ interface JobSubsection {
     title: string;
     role: string;
     bullets: string[];
+    tags?: string[];
 }
 
 interface Job {
@@ -46,7 +47,7 @@ const education: Education[] = [
         "id": 1,
         "degree": "B.S. Computer Science",
         "institution": "University of the Philippines",
-        "period": "September 2020 - July 2024",
+        "period": "Sep 2020 - Jul 2024",
         "picture": `${buildUrlBase}/experience/UP.png`,
         "achievements": [
             "Graduated Cum Laude",
@@ -58,7 +59,7 @@ const education: Education[] = [
         "id": 2,
         "degree": "TVL - Information and Communication Technology",
         "institution": "Tagbilaran City Science High School",
-        "period": "August 2018 - July 2020",
+        "period": "Aug 2018 - Jul 2020",
         "picture": `${buildUrlBase}/experience/TCSHS.png`,
         "achievements": []
     }
@@ -69,7 +70,7 @@ const jobs: Job[] = [
         "id": 1,
         "role": "Contract & Project-Based Engagements",
         "company": "Freelance Software Engineer",
-        "period": "January 2025 – June 2026",
+        "period": "Jan 2025 - Jun 2026",
         "picture": `${buildUrlBase}/experience/Freelance.svg`,
         "subsections": [
             {
@@ -77,17 +78,19 @@ const jobs: Job[] = [
                 "role": "Lead Developer / Project Manager",
                 "bullets": [
                     "Co-led a team of developers and US RNs building a Next.js compliance platform on Vercel and AWS, owning the delivery and feature work",
-                    "Built a Python automation suite that lifted the team's peak output from 7–10 handmade reports a day to 100+ (a 10x improvement) across 8 client centers, helping them pass surveys at 100%"
-                ]
+                    "Built a Python automation suite that lifted the team's peak output from 7-10 handmade reports a day to 100+ (a 10x improvement) across 8 client centers, helping them pass surveys at 100%"
+                ],
+                "tags": ["NextJS", "Python", "AWS", "Vercel"]
             },
             {
                 "title": "GymBros Inc. (Liftoff App)",
                 "role": "Lead Developer",
                 "bullets": [
                     "Built and deployed a full-stack Next.js app (React, Node, Supabase) for ad-management workflows, connected to TikTok, Meta, and Google over their REST APIs with retry and rate-limit handling",
-                    "Cut ad publishing from 30–40 minutes per platform to about 1 minute by building an ad-creation pipeline on the Meta and TikTok APIs",
+                    "Cut ad publishing from 30-40 minutes per platform to about 1 minute by building an ad-creation pipeline on the Meta and TikTok APIs",
                     "Refactored an 8,000-line file into smaller modules and switched 10,000+ item lists to virtualized rendering (TanStack), cutting startup from about 12 minutes to near-instant"
-                ]
+                ],
+                "tags": ["NextJS", "React", "Node", "Supabase", "TanStack"]
             },
             {
                 "title": "Freelance Clients",
@@ -95,16 +98,17 @@ const jobs: Job[] = [
                 "bullets": [
                     "Built a Playwright scraping system with n8n workflows and captcha solvers that delivered bank-repossessed property data into a Next.js dashboard for a real-estate intelligence client",
                     "Built a Next.js and Supabase demo with OpenAI function-calling RAG for The Cultivator, an AI-powered job platform"
-                ]
+                ],
+                "tags": ["Playwright", "n8n", "OpenAI", "Supabase"]
             }
         ],
-        "tags": ["NextJS", "Python", "Supabase", "AWS", "Playwright", "n8n"]
+        "tags": []
     },
     {
         "id": 2,
         "role": "Intern",
         "company": "Devsoft PH",
-        "period": "August 2024 – Dec. 2024",
+        "period": "Aug 2024 - Dec 2024",
         "picture": `${buildUrlBase}/experience/DevSoftPH.jpg`,
         "bullets": [
             "Provided technical support by debugging Angular and jQuery issues, improving product stability and user experience",
@@ -117,7 +121,7 @@ const jobs: Job[] = [
         "id": 3,
         "role": "Intern",
         "company": "Old St. Labs",
-        "period": "July 2023 – Sept. 2023",
+        "period": "Jul 2023 - Sep 2023",
         "picture": `${buildUrlBase}/experience/OldStLabs.png`,
         "bullets": [
             "Built full-stack apps in an Nx monorepo (NestJS, Next.js) with responsive React and TailwindCSS UIs under senior code review"
@@ -128,7 +132,7 @@ const jobs: Job[] = [
         "id": 4,
         "role": "Intern",
         "company": "GWION Solutions",
-        "period": "March 2020 – June 2020",
+        "period": "Mar 2020 - Jun 2020",
         "picture": `${buildUrlBase}/experience/Gwion.jpg`,
         "bullets": [
             "Built custom WordPress themes using PHP and JavaScript using the classic editor workflow",
@@ -158,6 +162,14 @@ const projects: Project[] = [
     },
     {
         "id": 3,
+        "title": "Java Job Tracker",
+        "description": "A Spring Boot job-application tracker with a layered controller, service, and repository architecture, JPA entities, and REST endpoints. Built with PostgreSQL and Docker to grow my Java depth in public.",
+        "tags": ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+        "image": "",
+        "link": "https://github.com/JoshCemine/java-job-tracker"
+    },
+    {
+        "id": 4,
         "title": "This Portfolio Website",
         "description": "Designed in Figma and built with Astro, React, and TailwindCSS. Deployed on a DigitalOcean droplet using Nginx, later migrated to Oracle Cloud.",
         "tags": ["Astro", "React", "TailwindCSS"],
@@ -165,7 +177,7 @@ const projects: Project[] = [
         "link": "https://github.com/JoshCemine/Portfolio-v2"
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Project Ceboom",
         "description": "A collaborative MERN-stack app for finding optimal city routes. I led DevOps and deployment, configuring AWS infrastructure for high availability.",
         "tags": ["ReactJS", "ExpressJS", "AWS"],
@@ -173,7 +185,7 @@ const projects: Project[] = [
         "link": "https://github.com/sansqed/project-ceboom"
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "College of Science Automatic Request System",
         "description": "Full-stack web app automating school form requests with real-time approval tracking. I engineered the ExpressJS REST API and managed the AWS deployment.",
         "tags": ["ReactJS", "ExpressJS", "AWS"],
@@ -181,7 +193,7 @@ const projects: Project[] = [
         "link": "https://github.com/johnochea/croma"
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "CROCS vs PNGs",
         "description": "A Godot tower defense game with wave-based enemy mechanics. I implemented the multiplayer synchronization and weapon systems.",
         "tags": ["Godot"],

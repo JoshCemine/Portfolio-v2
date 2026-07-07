@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import devImage from "/src/assets/DevImage.png";
+import devImageHover from "/src/assets/DevImageHover.png";
+import { skills } from "../data/data";
+---
+
+<section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+    <div
+        class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#1C1518]/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only"
+    >
+        <h2 class="text-sm font-bold uppercase tracking-widest text-stone-200">
+            About
+        </h2>
+    </div>
+
+    <div class="sm:flex sm:items-start sm:gap-8">
+        <div class="space-y-4">
+            <p>
+                I'm a fullstack developer from Cebu City, Philippines, with two
+                years of hands-on experience on small teams where I own features
+                end to end, from the data layer to the deployed UI. Most
+                recently I've been freelancing: co-leading a healthcare
+                compliance platform, building an ad-creation and analytics
+                platform on the TikTok, Meta, and Google APIs, and shipping
+                scraping and AI-integration systems for clients.
+            </p>
+            <p>
+                I graduated <span class="text-stone-200">cum laude</span> in
+                Computer Science from the University of the Philippines in
+                2024, and interned at Devsoft PH, Old St. Labs, and GWION
+                Solutions before going independent. These days I'm building
+                depth in Java and Spring Boot. I like owning the boring,
+                load-bearing parts that keep software trustworthy.
+            </p>
+            <p>
+                Away from the keyboard, I sang with (and ran committees for) UP
+                Serenata, our university choir.
+            </p>
+        </div>
+        <div
+            class="group relative mt-6 w-40 shrink-0 overflow-hidden rounded-lg border-2 border-stone-100/10 transition-colors hover:border-stone-100/30 sm:mt-0"
+        >
+            <Image
+                src={devImage}
+                loading={"eager"}
+                alt="Josh Cemine"
+                class="w-full transition-opacity duration-250 group-hover:opacity-0"
+            />
+            <Image
+                src={devImageHover}
+                loading={"eager"}
+                alt="Josh Cemine - hover"
+                class="absolute inset-0 w-full opacity-0 transition-opacity duration-250 group-hover:opacity-100"
+            />
+        </div>
+    </div>
+
+    <ul class="mt-6 flex flex-wrap" aria-label="Technologies I work with">
+        {
+            skills.map((skill) => (
+                <li class="mr-1.5 mt-2">
+                    <div class="flex items-center rounded-full bg-amber-400/10 px-3 py-1 text-xs font-medium leading-5 text-amber-300">
+                        {skill.name}
+                    </div>
+                </li>
+            ))
+        }
+    </ul>
+</section>

@@ -2,8 +2,7 @@
 // Renders the four social icons; parent supplies the flex wrapper.
 const { size = "w-6 h-6" } = Astro.props as { size?: string };
 
-const iconClass =
-    "fill-white opacity-70 group-hover:opacity-100 transition-opacity duration-250";
+const iconClass = "fill-current";
 
 const links = [
     {
@@ -54,7 +53,7 @@ const links = [
                     ? undefined
                     : "noopener noreferrer"
             }
-            class={`${size} group`}
+            class={`${size} group text-stone-400 transition-colors duration-250 hover:text-amber-300`}
             aria-label={link.label}
         >
             <svg
