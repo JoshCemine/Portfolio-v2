@@ -5,9 +5,9 @@ import ProjectsCards from "./ProjectsCards.astro";
 
 <div id="projects-container" class="section-container">
 	<div class="max-w">
-		<h1 class="section-header w-full">PROJECTS</h1>
-		<div class="flex flex-wrap justify-around gap-6">
-			{projects.map((projects) => <ProjectsCards {projects} />)}
+		<h2 class="section-header w-full">PROJECTS</h2>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+			{projects.map((project) => <ProjectsCards {project} />)}
 		</div>
 	</div>
 </div>

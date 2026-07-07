@@ -17,7 +17,7 @@ const EducationContent = () => {
                     </div>
                     <div class={"ml-10 flex flex-1 flex-col justify-start gap-1"}>
                         <p class={'text-xs'}>{e.period}</p>
-                        <h2 class={'text-m font-bold'}>{e.institution}</h2>
+                        <h3 class={'text-m font-bold'}>{e.institution}</h3>
                         <p class={"text-xs"}>{e.degree}</p>
                         <ul class={"list-disc pl-6"}>
                             {e.achievements.map(item => <li>{item}</li>)}

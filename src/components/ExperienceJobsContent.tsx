@@ -16,9 +16,24 @@ const JobsContent = () => {
                     </div>
                     <div class={"ml-10 flex flex-1 flex-col justify-start gap-1"}>
                         <p class={'text-xs'}>{e.period}</p>
-                        <h2 class={'text-m font-bold'}>{e.company}</h2>
+                        <h3 class={'text-m font-bold'}>{e.company}</h3>
                         <p class={"text-xs"}>{e.role}</p>
-                        <p >{e.description} </p>
+
+                        {e.bullets && (
+                            <ul class={"list-disc pl-6"}>
+                                {e.bullets.map(bullet => <li>{bullet}</li>)}
+                            </ul>
+                        )}
+
+                        {e.subsections && e.subsections.map(sub => (
+                            <div class={"pt-2"}>
+                                <p class={"font-semibold"}>{sub.title}</p>
+                                <p class={"text-xs text-white/60"}>{sub.role}</p>
+                                <ul class={"list-disc pl-6"}>
+                                    {sub.bullets.map(bullet => <li>{bullet}</li>)}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
                 </li>
             ))}

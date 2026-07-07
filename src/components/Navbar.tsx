@@ -62,16 +62,17 @@ const Navbar = () => {
                    transition-all duration-300 ease-in-out hidden md:block 2xl:hidden
                    ${visible ? 'opacity-100 visible' : 'opacity-0 invisible delay-50'}`}
         >
-            <div class="flex flex-col font-extrabold text-2xl font-test p-4 pl-12 [&>*]:pb-3">
+            <div class="flex flex-col font-extrabold text-2xl font-display p-4 pl-12 [&>*]:pb-3">
                 {navBarItems.map(item => (
                     <div key={item.target} class="relative">
-                        <p
-                            class={`cursor-pointer transition-colors ${activeSection === item.target ? 'text-white' : 'text-white/40 hover:text-white'
+                        <button
+                            type="button"
+                            class={`cursor-pointer transition-colors text-left font-extrabold text-2xl font-display ${activeSection === item.target ? 'text-white' : 'text-white/40 hover:text-white'
                                 }`}
                             onClick={() => scrollToElement(item.target)}
                         >
                             {item.label}
-                        </p>
+                        </button>
                         {activeSection === item.target && (
                             <div class="absolute -left-4 top-1/2 transform -translate-y-2.25 w-2 h-2 bg-white rounded-full"></div>
                         )}

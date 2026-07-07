@@ -4,10 +4,32 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- FAVICON LINKED TO FILE -->
-		<link rel="icon" type="image/svg+xml" href="favicon.ico" />
-		<link rel="stylesheet" href="/src/styles/global.css" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Josh's Portfolio</title>
+
+		<!-- SEO / SOCIAL SHARING -->
+		<title>Josh Cemine | Fullstack Developer</title>
+		<meta
+			name="description"
+			content="Portfolio of Josh Cemine, a fullstack developer from the Philippines building web applications with Next.js, React, Python, and more."
+		/>
+		<meta property="og:title" content="Josh Cemine | Fullstack Developer" />
+		<meta
+			property="og:description"
+			content="Portfolio of Josh Cemine, a fullstack developer from the Philippines building web applications with Next.js, React, Python, and more."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://joshcemine.com" />
+		<meta property="og:image" content="https://joshcemine.com/projects/Portfoliov2.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<slot />

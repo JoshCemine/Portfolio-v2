@@ -7,7 +7,7 @@ export default function Experience() {
     return (
         <div id={"experience-container"} className={"section-container"}>
             <div class={"w-full"}>
-                <h1 className={"section-header"}>EXPERIENCE</h1>
+                <h2 className={"section-header"}>EXPERIENCE</h2>
                 <div className={"flex  items-center justify-center flex-col "}>
                     <div className={'w-full '}>
                         {/* <!-- HEADER SECTION --> */}
@@ -18,20 +18,24 @@ export default function Experience() {
                             ></div>
 
                             {/* JOBS TAB */}
-                            <div
-                                className={`cursor-pointer flex justify-center w-1/2 rounded-tl-lg py-2 z-10 transition-colors duration-200 hover:bg-white/25 ${isJobsTabActive ? 'text-white ' : 'text-white/50 '}`}
+                            <button
+                                type="button"
+                                aria-pressed={isJobsTabActive}
+                                className={`cursor-pointer flex justify-center w-1/2 rounded-tl-lg py-2 z-10 font-bold transition-colors duration-200 hover:bg-white/25 ${isJobsTabActive ? 'text-white ' : 'text-white/50 '}`}
                                 onClick={() => setJobsTabActive(true)}
                             >
-                                <p>JOBS</p>
-                            </div>
+                                JOBS
+                            </button>
 
                             {/* EDUCATION TAB */}
-                            <div
-                                className={`cursor-pointer flex justify-center w-1/2 rounded-tr-lg py-2 z-10 transition-colors duration-200 hover:bg-white/25 ${isJobsTabActive ? 'text-white/50' : 'text-white'}`}
+                            <button
+                                type="button"
+                                aria-pressed={!isJobsTabActive}
+                                className={`cursor-pointer flex justify-center w-1/2 rounded-tr-lg py-2 z-10 font-bold transition-colors duration-200 hover:bg-white/25 ${isJobsTabActive ? 'text-white/50' : 'text-white'}`}
                                 onClick={() => setJobsTabActive(false)}
                             >
-                                <span>EDUCATION</span>
-                            </div>
+                                EDUCATION
+                            </button>
                         </div>
 
                         {/* <!-- CONTENT SECTION --> */}
